@@ -3,7 +3,6 @@ sequence_numbers = input('Введите целые числа через про
 user_number = int(input('Введите любое число: '))
 #======================================================================================================================================================================
 # Функция для определения цифр в строке
-
 def is_int(str):
     str = str.replace(' ', '')
     try:
@@ -24,11 +23,9 @@ else:
     sequence_numbers = sequence_numbers.split()
 #======================================================================================================================================================================
 # Меняем список строк на список чисел
-
 list_sequence_numbers = [int(item) for item in sequence_numbers]
 #======================================================================================================================================================================
 # Сортировка списка
-
 def merge_sort(L):
     if len(L) < 2:
         return L[:]
@@ -62,7 +59,6 @@ def merge(left, right):
 list_sequence_numbers = merge_sort(list_sequence_numbers)
 #======================================================================================================================================================================
 # Установка позиции элемента
-
 def binary_search(array, element, left, right):
     try:
         if left > right:
@@ -80,7 +76,6 @@ def binary_search(array, element, left, right):
 # Устанавливается номер позиции элемента, который меньше
 # введенного пользователем числа, а следующий за ним больше или равен этому числу.
 print(f'Упорядоченный по возрастанию список: {list_sequence_numbers}')
-
 if not binary_search(list_sequence_numbers, user_number, 0, len(list_sequence_numbers)):
     rI = min(list_sequence_numbers, key=lambda x: (abs(x - user_number), x))
     ind = list_sequence_numbers.index(rI)
